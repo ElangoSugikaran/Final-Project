@@ -1,0 +1,1085 @@
+/* Navigation bar styles */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .custom-navbar {
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 90px;
+    background: #fff;
+    z-index: 9;
+  }
+  
+  .custom-nav {
+    padding: 20px vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .logo {
+    height: 80px;
+    width: 160px;
+    padding-left: 10px;
+    transition: transform 0.5s;
+    bottom: -3px;
+  }
+  
+  .nav-items {
+    display: flex;
+    align-items: right;
+    margin-left: 800px;
+  }
+  
+  .nav-items a {
+    margin-left: 20px;
+  }
+  
+  .custom-links-container {
+    width: 100%;
+    display: flex;
+    padding: 15px 0;
+    justify-content: center;
+    list-style: none;
+    border-top: 1px solid #fff;
+    background: #183991;
+    margin-top: 10px;
+  }
+  
+  .link {
+    text-transform: capitalize;
+    padding: 0 15px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+  }
+  
+  .link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transition: width 0.2s;
+    bottom: -3px;
+  }
+  
+  .link:hover::after {
+    width: 100%;
+  }
+  
+  /* code for search button */
+  
+  /* Style for the search container */
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  /* Style for the search bar */
+  .search-bar {
+    display: flex;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  /* Style for the search input */
+  #search-input {
+    border: none;
+    outline: none;
+    width: 200px;
+    padding: 5px;
+  }
+  
+  /* start of nav bar icon's in right side */
+  /* Style for the search button */
+  #search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Style for the cart icon */
+  #cart-icon {
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  /* Style for the cart count */
+  .cart-count {
+    background-color: #FF5733;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 16px;
+  } 
+  
+  #search-icon{
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  #user-icon{
+    text-decoration: none;
+    font-size: 24px;
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  /* add to wishlist code start */
+  
+  
+  
+  
+  /* end of nav bar icon's in right side */
+  
+  /* code for Mega dropdown styles */
+  /* Updated Mega dropdown styles */
+  .mega-dropdown {
+    position: absolute;
+    top: 100%;
+    left: -100px; /* Center horizontally */
+    /* transform: translateX(-50%);  Center horizontally */
+    width: 580px;
+    /* max-width: calc(100% - 40px); Max width with spacing on both sides */
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
+    padding: 40px;
+  }
+  
+  /* Display mega dropdown on link hover */
+  .link-item:hover .mega-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px); /* Optional: Add a slight animation for smooth appearance */
+  }
+  
+  .mega-dropdown-column {
+    width: 32%; /* Three columns */
+    float: left;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .mega-dropdown-item a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+  }
+  
+  .mega-dropdown-item a:hover {
+    color: #18bc9c;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-items {
+      display: none;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .link-item {
+      margin: 10px;
+    }
+  
+    .link {
+      color: #000;
+    }
+  
+    .links-container {
+      width: 100%;
+    }
+  
+    .link-item:hover .mega-dropdown {
+      width: 100%;
+    }
+  }
+  
+  /* Ensure mega dropdown is behind the navbar */
+  .link-item {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .mega-dropdown {
+    z-index: -1;
+  }
+  
+  /* Updated Dropdown styles for Brands */
+  .dropdown {
+    position: absolute;
+    top: 100%; /* Adjust the top position to align with the navigation bar */
+    left: 0;
+    width: 200px;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.7s ease;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  /* Display dropdown on link hover */
+  .link-item:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px); /* Optional: Add a slight animation for smooth appearance */
+  }
+  
+  .dropdown-item a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+  }
+  
+  .dropdown-item a:hover {
+    color: #18bc9c;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .nav-items {
+      display: none;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .link-item {
+      margin: 10px;
+    }
+  
+    .link {
+      color: #000;
+    }
+  
+    .links-container {
+      width: 100%;
+    }
+  
+    .link-item:hover .dropdown {
+      width: 100%;
+    }
+  }
+  
+  /* end of mega drop down menu and drop down menu */
+  
+  /*hidden drop down search bar */
+  
+  
+  /*===image slider sytle code start===*/
+  
+  .slider{
+    width: 100%;
+    max-width: 100vw;
+    height:650px;
+    margin: auto;
+    position:relative;
+    overflow: hidden;
+  }
+  
+  .list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: 300%;
+  }
+  
+  .list img{
+    width: 1800px;
+    /*max-width: 100vw;*/
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  
+  .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+  }
+  
+  .dots{
+     position: absolute;
+     bottom: 10px;
+     color: #fff;
+     left: 0;
+     width: 100%;
+     margin: 0;
+     padding: 0;
+     display: flex;
+     justify-content: center;
+  }
+  
+  .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    transition: 1s;
+  }
+  
+  .dots li.active{
+    width: 30px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .slider{
+      height: 400px;
+    }
+    
+  }
+  
+  /*image slider style code end*/
+  
+  /* Rest of your CSS */
+  
+  /* Default styles for larger screens */
+  .image-grid {
+    --gap: 16px;
+    --num-cols: 5;
+    --row-height: 300px;
+    box-sizing: border-box;
+    padding: var(--gap);
+    display: grid;
+    grid-template-columns: repeat(var(--num-cols), 1fr);
+    grid-auto-rows: var(--row-height);
+    gap: var(--gap);
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-large {
+    grid-column: span 2;
+    width: 450px;
+    height: 614px;
+    margin-left: 200px;
+  }
+  
+  .image-small:nth-child(2) {
+    grid-column: 3;
+    width: 400px;
+    height: 300px;
+  }
+  
+  .image-small:nth-child(3) {
+    grid-column: 4;
+    width: 400px;
+    height: 300px;
+  }
+  
+  .image-small:nth-child(4) {
+    grid-column: 3;
+    grid-row: 2;
+    width: 400px;
+    height: 300px;
+  }
+  
+  .image-small:nth-child(5) {
+    grid-column: 4;
+    grid-row: 2;
+    width: 400px;;
+    height: 300px;
+  }
+  
+  
+  /* Anything under 1024px */
+  @media screen and (max-width: 1024px) {
+    .image-grid {
+      --num-cols: 2;
+      --row-height: 200px;
+    }
+  }
+  
+  
+  .image-large,
+  .image-small {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Style the image */
+  .image-large img,
+  .image-small img {
+    width: 100%;
+    transition: transform 0.3s;
+  }
+  
+  .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px; /* Initial font size */
+    transition: font-size 0.3s;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+  }
+  
+  .image-large a:hover img,
+  .image-small a:hover img {
+    transform: scale(1.05); /* Zoom effect on hover */
+  }
+  
+  .image-large a:hover .image-text ,
+  .image-small a:hover .image-text{
+    font-size: 18px; /* Font size increase on hover */
+    opacity: 1; /* Show the text on hover */
+  }
+  
+  @media (max-width: 768px) {
+    .image-large,
+    .image-small {
+        flex: 0 0 100%; /* Full width for smaller screens */
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+    .image-large {
+        grid-column: span 1;
+    }
+  }
+  
+  /* Styles for the image grid */
+  
+  /*==== slider style code start ====*/
+  
+  
+  .collection-container{
+    width: 1005;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .collection{
+    position: relative;
+  }
+  
+  .collection img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .collection p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    text-transform: capitalize;
+  }
+  
+  .collection:nth-child(3){
+    grid-column: span 2;
+    margin-bottom: 10px;
+  }
+  
+  .before-btn,
+  .after-btn {
+    border: none;
+    width: 10vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg, rgba(255,255,255,0)0%, #fff 100%);
+    cursor: pointer;
+    z-index: 8;
+  }
+  
+  .before-btn{
+    left: 0;
+  }
+  
+  .after-btn{
+    right: 0;
+  }
+  
+  /*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< appointment page style code >>>>>>>>>>>>>>>>>>>>>>>>>>*/
+.app-banner img{
+    background-position: center;
+    background-size: cover;
+    width: 1519px;
+    height: 700px;
+  }
+  
+  .appointment-container {
+    height: 550px;
+    max-width: 800px;
+    width: 100%;
+    margin-left: 300px;
+    margin-top: 50px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  h1{
+    text-align: center;
+  }
+  
+  .A_row {
+    display: flex;
+    margin-bottom: 12px;
+  }
+  
+  .A_col {
+    flex: 1;
+    margin-right: 8px;
+  }
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .intput-box{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+  }
+  
+  .intput-box input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 40px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-bottom: 1.5px solid #aaaaaa;
+    border-radius: 0; /* Set border-radius to 0 to reduce the curve */
+  }
+  
+  button.appointment-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button.appointment-button:hover {
+    background-color: #0056b3;
+  }
+  
+  
+  /* bannar code in home page */
+  
+  /* Style for the image */
+  .app-banner {
+    position: relative;
+    width: 100%;
+    max-width: 1850px; /* Adjust the width as needed */
+    overflow: hidden;
+  }
+  
+  /* Style for the image */
+  .app-banner img {
+    margin-bottom: 100px;
+    width: 100%;
+    height: 600px;
+    display: block;
+  }
+  
+  /* appointment css start */
+    /* Style for the form container */
+    .appointment-container {
+      /* background-color: #f0f0f0; */
+      /* border: 2px solid #ccc; */
+      padding: 30px;
+      /* border-radius: 10px; */
+      /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+      width: 60%;
+      height: 50%;
+      margin: 0 auto;
+    }
+  
+    /* Style for the form header */
+    .appointment-container h1 {
+      font-size: 24px;
+      color: #333;
+      /* margin-bottom: 20px; */
+    }
+  
+    /* Style for form labels */
+    .appointment-container label {
+      font-weight: bold;
+    }
+  
+    /* Style for form input fields */
+    .appointment-container input[type="text"],
+    .appointment-container input[type="number"],
+    .appointment-container input[type="date"],
+    .appointment-container input[type="time"],
+    .appointment-container textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+  
+    /* Style for the Submit button */
+    .appointment-button {
+      background-color: #007BFF;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  
+    .appointment-button:hover {
+      background-color: #0056b3;
+    }
+    
+  
+  
+  /* appointment css end */
+  
+  /* Style for the text "COLOR LENSES" */
+  /* .banner-text {
+    position: absolute;
+    top: 80px;
+    left: 280px; Adjust the text's left position
+    transform: translateY(-50%);
+    color: black;
+    font-size: 75px;
+    right: 80px;
+  } */
+  
+  /* cntact us start*/
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .contactus-container {
+    /* padding: 30px; */
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto; 
+  }
+  
+  .contact-image {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .contact-image img {
+    width: 350px;
+    height: 400px;
+  }
+  
+  .contact-info {
+    flex: 2;
+    padding: 40px;
+    /* background-color: #f5f5f5; */
+    width: 600px;
+  }
+  
+  .contact-info ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .contact-info li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .contact-line {
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .contact-container {
+    /* background-color: #f0f0f0; */
+    /* border: 2px solid #ccc; */
+    padding: 30px;
+    /* border-radius: 10px; */
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+  }
+  
+  /* Style for the form header */
+  .contact-container h1 {
+    font-size: 24px;
+    color: #333;
+    /* margin-bottom: 20px; */
+  }
+  
+  /* Style for form labels */
+  .contact-containerlabel {
+    font-weight: bold;
+  }
+  
+  /* Style for form input fields */
+  .contact-container input[type="text"],
+  .contact-container  input[type="number"],
+  .contact-container  input[type="date"],
+  .contact-container  input[type="time"],
+  .contact-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  /* Style for the Submit button */
+  .contact-button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* contact us end */
+  
+  
+  #carouselExampleIndicators{
+    /* width: 100%;
+    max-width: 1200px;
+    height: 400px; */
+    width: 100%;
+    max-width: 100vw;
+    height: 500px;
+    /* border-radius: 18px; */
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  
+  #carouselExampleIndicators .carousel-item img{
+    /* width: 1200px;
+    max-width: 1200px;
+    height: 400px; */
+    width: 1200px;
+    /*max-width: 100vw;*/
+    height: 500px;
+    /* border-radius: 18px; */
+    object-fit: cover;
+  }
+  
+  /* frames css bootstrap */
+  .icon-hover:hover {
+    border-color: #3b71ca !important;
+    background-color: white !important;
+  }
+  
+  .icon-hover:hover i {
+    color: #3b71ca !important;
+  }
+  
+  /* shaopping cart css bootstrap */
+  
+  .icon-hover-primary:hover {
+    border-color: #3b71ca !important;
+    background-color: white !important;
+  }
+  
+  .icon-hover-primary:hover i {
+    color: #3b71ca !important;
+  }
+  .icon-hover-danger:hover {
+    border-color: #dc4c64 !important;
+    background-color: white !important;
+  }
+  
+  .icon-hover-danger:hover i {
+    color: #dc4c64 !important;
+  }
+  
+  #backgroundDiv {
+    background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(../image/small\ bar.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  #owl-demo .item{
+    background: #42bdc2;
+    padding: 30px 0px;
+    margin: 10px;
+    color: #FFF;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  /* sign-up code */
+
+  /* width: 1519px;
+height: 700px; */
+
+
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< signup form page style code >>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/* .signup{
+  width: 1518px;
+  /* max-width: 100%; */
+  /* height: 1200px;  */
+  /* max-height: 100%; */
+  /* background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(../image/login-background.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  bottom: 280px;
+  background-repeat: no-repeat; */
+/* } */
+
+  .signup {
+    /* width: 1719px; */
+      width: 100%; 
+      height: 100vh; 
+      overflow: hidden; /* Disable scrolling in both directions */
+      background-image: linear-gradient(rgba(0,0,50,0.8),rgba(0,0,50,0.8)), url(../image/login-background.jpeg);
+      background-position: center;
+      /* background-attachment:fixed; Keeps the background fixed */
+      background-size: cover; /* Cover the entire element */
+      position: relative;
+      background-repeat: no-repeat;
+    
+  }
+  
+  .signup_container{
+    position:relative;
+    max-width: 500px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 101;
+    background: #fff;
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: rgba(0,0,0,0.1);
+  }
+  
+  .fa-times{  /*forn_close*/
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #0b0217;
+    font-size: 22px;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  .signup-form h2{
+    font-size: 22px;
+    color: #0b0217;
+    text-align: center;
+  }
+  
+  .intput-box{
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+  }
+  
+  .intput-box input{
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 40px;
+    color: #333;
+    transition: all 0.2s ease;
+    border-bottom: 1.5px solid #aaaaaa;
+    border-radius: 0; /* Set border-radius to 0 to reduce the curve */
+  }
+  
+  .intput-box input:focus{
+    border-color: #183991;
+  }
+  
+  .intput-box i{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+  
+  .intput-box i.fa-envelope,
+  .intput-box i.fa-user,
+  .intput-box i.fa-mobile,
+  .intput-box i.fa-lock{
+    left: 0;
+    color: #070707;
+  }
+  
+  .intput-box input:focus ~ i.fa-envelope,
+  .intput-box input:focus ~ i.fa-user,
+  .intput-box input:focus ~ i.fa-mobile,
+  .intput-box input:focus ~ i.fa-lock{
+   color:  #183991;
+  }
+  
+  
+  .intput-box i.fa-eye-slash{
+    right: 0;
+    font-size: 15px;
+  }
+  
+  .signup_container a{
+    color: #183991;
+    font-size: 12px;
+  }
+  
+  .signup_container a{
+    text-decoration: underline;
+  }
+  
+  .signup_container .button{
+    background: #183991;
+    margin-top: 30px;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 10px;
+  }
+  
+  .button{
+    -webkit-text-fill-color: #fff;
+  }
+  
+  .login_signup{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+  }
+  
+  .password-showHide{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    display: grid;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index:99;
+  }
+  
+  .password-showHide .icon {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  
+  .password-showHide .icon path {
+    fill: #c2c2c2;
+    transition: all 0.2s ease;
+  }
+  
+  .password-showHide:hover .icon path {
+    fill: #2c3638;
+    transition: all 0.2s ease;
+  }
+  
+  .password-showHide .icon.show-password {
+    opacity: 1;
+    z-index: 9;
+  }
+  .password-showHide .icon.hide-password {
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .password-showHide.hide .icon.show-password {
+    opacity: 0;
+    z-index: -1;
+  }
+  
+  .password-showHide.hide .icon.hide-password {
+    z-index: 9;
+    opacity: 1;
+  }
+  
+  
