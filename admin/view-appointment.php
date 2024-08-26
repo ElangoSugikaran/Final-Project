@@ -112,7 +112,9 @@ include './includes/sidebar.php';
                     <button class="btn btn-success">
                         <a href="mailto:<?php echo $Email; ?>?subject=Your%20appointment%20is%20confirmed&body=Thank%20you%20for%20scheduling%20an%20appointment.%20Your%20appointment%20is%20confirmed." style="color: white; text-decoration: none;">Send Email</a>
                     </button>
+                    <br>
                     <span class="button-space"></span>
+                    <br>
                     <button class="btn btn-danger">
                         <a href="../admin/view-appointment.php?DELETE=<?php echo $appointment_id; ?>" style="color: white; text-decoration: none;">Delete</a>
                     </button>
