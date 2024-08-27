@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
+body {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Toggle Styles */
+#viewport {
+  padding-left: 250px;
+  transition: all 0.5s ease;
+}
+
+#content {
+  width: 100%;
+  margin-right: 0;
+}
+
+/* Sidebar Styles */
+#sidebar {
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background: #37474F;
+  overflow-y: auto;
+  transition: all 0.5s ease;
+}
+
+#sidebar header {
+  background-color: #263238;
+  font-size: 20px;
+  line-height: 52px;
+  text-align: center;
+}
+
+#sidebar header a {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+}
+
+#sidebar .nav {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#sidebar .nav a {
+  display: block;
+  border-bottom: 1px solid #455A64;
+  color: #CFD8DC;
+  font-size: 14px;
+  padding: 16px 24px;
+  text-decoration: none;
+}
+
+#sidebar .nav a:hover {
+  background: #455A64;
+  color: #ECEFF1;
+}
+
+#sidebar .nav a i {
+  margin-right: 16px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+  }
+  
+  .header-icons .username {
+    font-size: 16px;
+    color: #333;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  .header-icons i {
+    font-size: 24px; /* Adjust size as needed */
+    color: #333;
+  }
+
+  #orderChart {
+    width: 100% !important; /* Forces the canvas to take the full width of its container */
+}
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
